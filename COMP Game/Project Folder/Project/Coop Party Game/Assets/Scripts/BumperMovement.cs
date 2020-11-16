@@ -7,11 +7,16 @@ public class BumperMovement : MonoBehaviour
     [Header("Speed Variables")]
     public float AcclerationSpeed;
     public float TurnSpeed;
+    public float TurnMulitpler;
 
     [Header("Transforms")]
     private Rigidbody RB;
 
-    public bool Player2;
+    [Header("Drag")]
+    public float MovementDrag;
+    public float RotationDrag;
+
+    public bool isPlayer2;
     private void Start()
     {
         RB = GetComponent<Rigidbody>();
@@ -21,13 +26,13 @@ public class BumperMovement : MonoBehaviour
     {
         PlayerChosen();
 
-        //Extra Gravity for the Players
-        RB.AddForce(Vector3.down * Time.deltaTime * 10);
+        RB.drag = MovementDrag;
+        RB.angularDrag = RotationDrag;
     }
 
     public void PlayerChosen()
     {
-        if(Player2 == true)
+        if(isPlayer2 == true)
         {
             //When Input is applied, the movement methods are used
             PlayerRotation(Input.GetAxis("Horizontal1"));
@@ -43,7 +48,7 @@ public class BumperMovement : MonoBehaviour
 
     void PlayerRotation(float Torque)
     {   
-        RB.AddTorque(transform.up * TurnSpeed * Torque);
+        RB.AddTorque(transform.up * TurnSpeed * TurnMulitpler * Torque);
     }
 
     void PlayerAccleration(float Accleration)
