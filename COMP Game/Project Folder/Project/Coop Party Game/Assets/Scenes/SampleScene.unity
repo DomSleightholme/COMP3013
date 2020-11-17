@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11d5adafa3d13b4999e0f3440b813d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcclerationSpeed: 40
+  AcclerationSpeed: 30
   TurnSpeed: 12
   TurnMulitpler: 5
   MovementDrag: 0.4
@@ -813,15 +813,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735966704}
-  m_LocalRotation: {x: 0.047629472, y: 0, z: 0, w: 0.99886507}
-  m_LocalPosition: {x: 0, y: 0.55, z: 20}
+  m_LocalRotation: {x: -0.000000026676464, y: -0.9988651, z: -0.047629472, w: -0.0000006109476}
+  m_LocalPosition: {x: 0.022103254, y: 0.6293336, z: 19.170013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1216406655}
   - {fileID: 837665398}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 5.46, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.46, y: -179.99998, z: 0}
 --- !u!114 &735966708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11d5adafa3d13b4999e0f3440b813d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcclerationSpeed: 40
+  AcclerationSpeed: 30
   TurnSpeed: 12
   TurnMulitpler: 5
   MovementDrag: 0.4
