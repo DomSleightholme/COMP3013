@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BumperMovement : MonoBehaviour
 {
@@ -15,6 +16,14 @@ public class BumperMovement : MonoBehaviour
     [Header("Drag")]
     public float MovementDrag;
     public float RotationDrag;
+
+    [Header("Collision")]
+    public ScoreManager score;
+    bool p1LastHitPlayer;
+    bool p2LastHitPlayer;
+    public Transform spawn;
+    public GameObject head;
+
 
     public bool isPlayer2;
     private void Start()
@@ -54,6 +63,41 @@ public class BumperMovement : MonoBehaviour
     void PlayerAccleration(float Accleration)
     {
         RB.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * AcclerationSpeed * Accleration);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player1")
+        {
+            p1LastHitPlayer = true;
+            score.addScore();
+            
+        }
+
+        if (collision.gameObject.tag == "Player2")
+        {
+            p2LastHitPlayer = true;
+            score.addScore();
+        }
+
+        if (collision.gameObject.tag == "DeathBox")
+        {
+            if(p1LastHitPlayer == true)
+            {
+                score.addScore();
+                p1LastHitPlayer = false;
+                p2LastHitPlayer = false;
+            }
+            else if(p2LastHitPlayer == true)
+            {
+                score.addScore();
+                p1LastHitPlayer = false;
+                p2LastHitPlayer = false;
+            }
+
+            Instantiate(gameObject, spawn.transform.position, spawn.transform.rotation);
+            Destroy(gameObject);
+        }
     }
 
 }

@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player1
+  - Player2
+  - DeathBox
+  - PlayerHead1
+  - PlayerHead2
   layers:
   - Default
   - TransparentFX
