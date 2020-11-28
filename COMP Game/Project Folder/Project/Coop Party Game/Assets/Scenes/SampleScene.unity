@@ -132,9 +132,10 @@ GameObject:
   - component: {fileID: 160338869}
   - component: {fileID: 160338871}
   - component: {fileID: 160338870}
+  - component: {fileID: 160338872}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,6 +201,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160338868}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &160338872
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160338868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &215915532
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +226,6 @@ GameObject:
   - component: {fileID: 215915533}
   - component: {fileID: 215915535}
   - component: {fileID: 215915534}
-  - component: {fileID: 215915536}
   m_Layer: 5
   m_Name: Player1 Score
   m_TagString: Untagged
@@ -279,19 +293,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215915532}
   m_CullTransparentMesh: 0
---- !u!114 &215915536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215915532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e266acad8ffbc5346889a6f2eb6c74b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 215915534}
 --- !u!1 &273367040
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,12 +458,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 394421413}
-  - component: {fileID: 394421412}
   - component: {fileID: 394421411}
   - component: {fileID: 394421410}
   m_Layer: 0
   m_Name: Player 2
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,9 +484,8 @@ MonoBehaviour:
   TurnMulitpler: 5
   MovementDrag: 0.4
   RotationDrag: 7
-  score: {fileID: 1177490504}
+  score: {fileID: 0}
   spawn: {fileID: 430660422}
-  head: {fileID: 1366816552}
   isPlayer2: 1
 --- !u!54 &394421411
 Rigidbody:
@@ -504,19 +503,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &394421412
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394421409}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7936568, y: 1, z: 2.7890773}
-  m_Center: {x: 0.011051416, y: 0, z: -0.43484092}
 --- !u!4 &394421413
 Transform:
   m_ObjectHideFlags: 0
@@ -575,6 +561,7 @@ GameObject:
   - component: {fileID: 643795464}
   - component: {fileID: 643795463}
   - component: {fileID: 643795462}
+  - component: {fileID: 643795466}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -666,6 +653,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &643795466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643795461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e266acad8ffbc5346889a6f2eb6c74b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1Score: {fileID: 215915534}
+  Player2Score: {fileID: 1177490502}
+  Player1: 0
+  Player2: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,12 +770,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 735966707}
-  - component: {fileID: 735966706}
   - component: {fileID: 735966705}
   - component: {fileID: 735966708}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Player1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,19 +795,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &735966706
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735966704}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7936568, y: 1, z: 2.7890773}
-  m_Center: {x: 0.011051416, y: 0, z: -0.43484092}
 --- !u!4 &735966707
 Transform:
   m_ObjectHideFlags: 0
@@ -839,9 +828,8 @@ MonoBehaviour:
   TurnMulitpler: 5
   MovementDrag: 0.4
   RotationDrag: 7
-  score: {fileID: 215915536}
+  score: {fileID: 0}
   spawn: {fileID: 430660422}
-  head: {fileID: 1216406654}
   isPlayer2: 0
 --- !u!1 &837665397
 GameObject:
@@ -854,9 +842,10 @@ GameObject:
   - component: {fileID: 837665398}
   - component: {fileID: 837665400}
   - component: {fileID: 837665399}
+  - component: {fileID: 837665401}
   m_Layer: 0
   m_Name: Model
-  m_TagString: Player1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,6 +910,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837665397}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &837665401
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837665397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &848438994
 GameObject:
@@ -1269,7 +1272,6 @@ GameObject:
   - component: {fileID: 1177490501}
   - component: {fileID: 1177490503}
   - component: {fileID: 1177490502}
-  - component: {fileID: 1177490504}
   m_Layer: 5
   m_Name: Player2 Score
   m_TagString: Untagged
@@ -1337,19 +1339,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177490500}
   m_CullTransparentMesh: 0
---- !u!114 &1177490504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177490500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e266acad8ffbc5346889a6f2eb6c74b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1177490502}
 --- !u!1 &1216406654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,9 +1351,10 @@ GameObject:
   - component: {fileID: 1216406658}
   - component: {fileID: 1216406657}
   - component: {fileID: 1216406656}
+  - component: {fileID: 1216406659}
   m_Layer: 0
   m_Name: Header
-  m_TagString: PlayerHead1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1377,8 +1367,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216406654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.100000024, z: 0.94}
-  m_LocalScale: {x: 1.0716099, y: 0.61043, z: 0.13}
+  m_LocalPosition: {x: -0, y: 0.016, z: 0.932}
+  m_LocalScale: {x: 1.678141, y: 0.9014257, z: 0.13}
   m_Children: []
   m_Father: {fileID: 735966707}
   m_RootOrder: 0
@@ -1391,7 +1381,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216406654}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1443,6 +1433,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216406654}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1216406659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216406654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb865ebc8e017e48b2b77af30f59c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerScore: 0
 --- !u!1 &1366816552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,9 +1458,10 @@ GameObject:
   - component: {fileID: 1366816556}
   - component: {fileID: 1366816555}
   - component: {fileID: 1366816554}
+  - component: {fileID: 1366816557}
   m_Layer: 0
   m_Name: Header
-  m_TagString: PlayerHead2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1470,8 +1474,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366816552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0.956}
-  m_LocalScale: {x: 1.0716099, y: 0.61043, z: 0.13}
+  m_LocalPosition: {x: 0, y: 0.02, z: 0.956}
+  m_LocalScale: {x: 1.6844635, y: 0.8894576, z: 0.13}
   m_Children: []
   m_Father: {fileID: 394421413}
   m_RootOrder: 0
@@ -1484,7 +1488,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366816552}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1536,6 +1540,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366816552}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1366816557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366816552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb865ebc8e017e48b2b77af30f59c6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerScore: 0
 --- !u!1 &1613563770
 GameObject:
   m_ObjectHideFlags: 0
