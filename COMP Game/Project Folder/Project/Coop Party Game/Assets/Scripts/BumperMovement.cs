@@ -65,7 +65,7 @@ public class BumperMovement : MonoBehaviour
     //Collisions
     private void OnCollisionEnter(Collision collision)
     {
-        if (gameObject.CompareTag("DeathBox"))
+        if (collision.gameObject.CompareTag("DeathBox"))
         {
             Instantiate(gameObject, spawn.transform.position, spawn.transform.rotation);
             Destroy(gameObject);
