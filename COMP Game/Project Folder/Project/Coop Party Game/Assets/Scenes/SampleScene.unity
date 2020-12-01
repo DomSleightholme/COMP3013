@@ -486,6 +486,7 @@ MonoBehaviour:
   RotationDrag: 7
   score: {fileID: 0}
   spawn: {fileID: 430660422}
+  knockbackForce: 300
   isPlayer2: 1
 --- !u!54 &394421411
 Rigidbody:
@@ -857,6 +858,7 @@ MonoBehaviour:
   RotationDrag: 7
   score: {fileID: 0}
   spawn: {fileID: 430660422}
+  knockbackForce: 300
   isPlayer2: 0
 --- !u!1 &837665397
 GameObject:

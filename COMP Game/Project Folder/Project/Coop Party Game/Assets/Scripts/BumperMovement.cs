@@ -18,8 +18,8 @@ public class BumperMovement : MonoBehaviour
     public float RotationDrag;
 
     [Header("Collision")]
-    public ScoreManager score;
     public Transform spawn;
+    public float knockbackForce;
 
 
     public bool isPlayer2;
@@ -67,8 +67,14 @@ public class BumperMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DeathBox"))
         {
-            Instantiate(gameObject, spawn.transform.position, spawn.transform.rotation);
-            Destroy(gameObject);
+            transform.position = spawn.transform.position;
+            transform.rotation = spawn.transform.rotation;
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Vector3 knockbackDirection = RB.transform.position - collision.transform.position;
+            RB.AddForce(knockbackDirection * knockbackForce);
         }
     }
 }
