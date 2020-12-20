@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class BumperMovement : MonoBehaviour
 {
@@ -25,36 +26,47 @@ public class BumperMovement : MonoBehaviour
     public GameObject head;
     bool debouncer;
 
+    [Header("Input Manager")]
+    public int PlayerIndex;
+    public BCInput controls;
+    private PlayerInput playerInput;
+    Vector2 movementInput;
 
-    public bool isPlayer2;
+    private void Awake()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        PlayerIndex = playerInput.playerIndex;
+
+       controls = new BCInput();
+       controls.PlayerMovement.Movement.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
+    }
+
     private void Start()
     {
         RB = GetComponent<Rigidbody>();
         debouncer = false;
+        RB = GetComponent<Rigidbody>();       
     }
 
     private void FixedUpdate()
     {
-        PlayerChosen();
-
         RB.drag = MovementDrag;
         RB.angularDrag = RotationDrag;
+
+        float h = movementInput.x;
+        float v = movementInput.y;
+        PlayerAccleration(v);
+        PlayerRotation(h);
     }
 
-    public void PlayerChosen()
+    private void OnEnable()
     {
-        if(isPlayer2 == true)
-        {
-            //When Input is applied, the movement methods are used
-            PlayerRotation(Input.GetAxis("Horizontal1"));
-            PlayerAccleration(Input.GetAxis("Vertical1"));
-        }
-        else
-        {
-            //When Input is applied, the movement methods are used
-            PlayerRotation(Input.GetAxis("Horizontal"));
-            PlayerAccleration(Input.GetAxis("Vertical"));
-        }
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 
     void PlayerRotation(float Torque)
