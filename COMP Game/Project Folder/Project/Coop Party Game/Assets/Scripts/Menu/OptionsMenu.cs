@@ -10,12 +10,18 @@ public class OptionsMenu : MonoBehaviour
     public Image MusicSliderFill;
     public Text MusicHeader;
     public Image MusicButton;
+    public Image MusicSliderHandle;
+    public Sprite MusicSliderOn;
+    public Sprite MusicSliderOff;
 
     [Header("SFX")]
     public Slider SFXSlider;
     public Image SFXSliderFill;
     public Text SFXHeader;
     public Image SFXButton;
+    public Image SFXSliderHandle;
+    public Sprite SFXSliderOn;
+    public Sprite SFXSliderOff;
 
     [Header("Resolution")]
     public Text ResText;
@@ -70,7 +76,7 @@ public class OptionsMenu : MonoBehaviour
     public void MusicInteract()
     {
         MusicButton.color = ButtonOn;
-
+        MusicSliderHandle.sprite = MusicSliderOn;
         MusicHeader.color = On;
         MusicSlider.interactable = true;
         MusicSliderFill.color = On;
@@ -78,7 +84,7 @@ public class OptionsMenu : MonoBehaviour
     public void MusicInteractOff()
     {
         MusicButton.color = ButtonOff;
-
+        MusicSliderHandle.sprite = MusicSliderOff;
         MusicHeader.color = Off;
         MusicSlider.interactable = false;
         MusicSliderFill.color = Off;
@@ -87,7 +93,7 @@ public class OptionsMenu : MonoBehaviour
     public void SFXInteract()
     {
         SFXButton.color = ButtonOn;
-
+        SFXSliderHandle.sprite = SFXSliderOn;
         SFXHeader.color = On;
         SFXSlider.interactable = true;
         SFXSliderFill.color = On;
@@ -95,7 +101,7 @@ public class OptionsMenu : MonoBehaviour
     public void SFXInteractOff()
     {
         SFXButton.color = ButtonOff;
-
+        SFXSliderHandle.sprite = SFXSliderOff;
         SFXHeader.color = Off;
         SFXSlider.interactable = false;
         SFXSliderFill.color = Off;
