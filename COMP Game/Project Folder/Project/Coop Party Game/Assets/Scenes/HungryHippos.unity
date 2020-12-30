@@ -508,7 +508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717405123}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.2, z: 26}
+  m_LocalPosition: {x: 0, y: 0.2, z: 25.4}
   m_LocalScale: {x: 1.5, y: 0.25, z: 2.5}
   m_Children:
   - {fileID: 338312381}
@@ -525,17 +525,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 717405123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d11d5adafa3d13b4999e0f3440b813d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 09bba3dbb67389042bf36e8be5066576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcclerationSpeed: 0
-  TurnSpeed: 20
-  TurnMulitpler: 0.5
-  MovementDrag: 0
-  RotationDrag: 0
+  AcclerationSpeed: 5
+  TurnSpeed: 5
+  TurnMulitpler: 5
+  MovementDrag: 2
+  RotationDrag: 2
   spawn: {fileID: 0}
   knockbackForce: 0
-  isPlayer2: 0
 --- !u!54 &717405126
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -550,7 +549,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!1 &772725746
 GameObject:
@@ -942,7 +941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2101182641
 Transform:
   m_ObjectHideFlags: 0
@@ -966,19 +965,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101182640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d11d5adafa3d13b4999e0f3440b813d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 09bba3dbb67389042bf36e8be5066576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcclerationSpeed: 0
-  TurnSpeed: 20
-  TurnMulitpler: 0.1
-  MovementDrag: 0
-  RotationDrag: 0
+  AcclerationSpeed: 5
+  TurnSpeed: 5
+  TurnMulitpler: 5
+  MovementDrag: 0.1
+  RotationDrag: 0.1
   spawn: {fileID: 0}
   knockbackForce: 0
-  isPlayer2: 1
 --- !u!54 &2101182643
 Rigidbody:
   m_ObjectHideFlags: 0
