@@ -178,7 +178,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -534,8 +534,8 @@ GameObject:
   m_Component:
   - component: {fileID: 394421413}
   - component: {fileID: 394421411}
-  - component: {fileID: 394421410}
   - component: {fileID: 394421412}
+  - component: {fileID: 394421410}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Player
@@ -552,16 +552,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 394421409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d11d5adafa3d13b4999e0f3440b813d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 729ec76ad8f7e5f4680fc6fe392ef373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AcclerationSpeed: 10
-  TurnSpeed: 12
+  AcclerationSpeed: 5
+  TurnSpeed: 5
   TurnMulitpler: 5
-  MovementDrag: 0.4
-  RotationDrag: 7
-  spawn: {fileID: 430660422}
-  knockbackForce: 300
+  MovementDrag: 0.1
+  RotationDrag: 0.1
+  spawn: {fileID: 0}
+  knockbackForce: 0
 --- !u!54 &394421411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -772,7 +772,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1025,7 +1025,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -1103,7 +1103,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1378,7 +1378,6 @@ GameObject:
   m_Component:
   - component: {fileID: 735966707}
   - component: {fileID: 735966705}
-  - component: {fileID: 735966708}
   - component: {fileID: 735966706}
   m_Layer: 0
   m_Name: Player 1
@@ -1386,7 +1385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &735966705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1432,25 +1431,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
---- !u!114 &735966708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735966704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d11d5adafa3d13b4999e0f3440b813d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AcclerationSpeed: 10
-  TurnSpeed: 12
-  TurnMulitpler: 5
-  MovementDrag: 0.4
-  RotationDrag: 7
-  spawn: {fileID: 430660422}
-  knockbackForce: 300
 --- !u!1 &776633684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1832,7 +1812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1908,7 +1888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1977,7 +1957,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3f2395d5ccf1d94a8f023cb51a6617f, type: 2}
+  - {fileID: 2100000, guid: ffbc304fb13b83945a290dafc420cb1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2077,7 +2057,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2204,7 +2184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb865ebc8e017e48b2b77af30f59c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerScore: 0
 --- !u!1 &1289496465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,7 +2241,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2339,16 +2318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa9d123eeb19d949a340944e3954ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCount: 5
-  PlayerHeaders:
-  - {fileID: 714685764}
-  - {fileID: 317940312}
-  - {fileID: 1041312415}
-  - {fileID: 678759742}
-  - {fileID: 1043667654}
-  - {fileID: 1936707296}
-  - {fileID: 776633685}
-  - {fileID: 509724204}
 --- !u!1 &1342137466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2375,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2530,7 +2499,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366816552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb865ebc8e017e48b2b77af30f59c6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b721581fbe17ce47862495bad1845db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerScore: 0
@@ -2591,7 +2560,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2662,7 +2631,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2762,7 +2731,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2840,7 +2809,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2918,7 +2887,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -2996,7 +2965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
@@ -3075,7 +3044,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c254323685a6acf478d875c939e87167, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72fca0fea43f1c549b84ec4fe1908055, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3150,7 +3119,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a2c2196e2478e9d4db0e230c1f398a75, type: 3}
+    m_Font: {fileID: 12800000, guid: e0ad744349c1ff846a904f012468bf57, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
