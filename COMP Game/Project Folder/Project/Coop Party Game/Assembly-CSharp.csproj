@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Game UI\HeaderManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HungerHippoControl.cs" />
+    <Compile Include="Assets\Scripts\HungryHippos\HipposMovement.cs" />
     <Compile Include="Assets\Scripts\Menu\AnimatedBackground.cs" />
     <Compile Include="Assets\Scripts\Menu\AnimatedButton.cs" />
     <Compile Include="Assets\Scripts\Menu\CutOutMask.cs" />

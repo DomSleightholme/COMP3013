@@ -307,9 +307,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""id"": ""20bfd1d3-c650-4c6d-8e16-31b200d07c0d"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
+                    ""name"": ""Forward"",
                     ""type"": ""Button"",
-                    ""id"": ""6663b46d-bdd0-4baf-a382-91ab9f74f5a2"",
+                    ""id"": ""7fd69f71-c431-4deb-8431-07bbcef22461"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Turning"",
+                    ""type"": ""Button"",
+                    ""id"": ""3ed54c09-9bb2-481b-bbc8-42b7b23dad30"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -318,14 +326,434 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""7ab196b0-6182-477f-a973-057062e0e6ec"",
+                    ""id"": ""6eb22763-a6ee-4a3d-a3a9-e7f8b81ccfc9"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""WASD"",
-                    ""action"": ""New action"",
+                    ""groups"": """",
+                    ""action"": ""Forward"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""50747918-3f33-4844-a77e-2d6eafa05c4b"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""47d5ac22-8955-4e7c-bd36-dfad0f3dce94"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""WASD"",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""c12955c0-41e6-47f6-aef7-91aff4431469"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""WASD"",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""ArrowKeys"",
+                    ""id"": ""2d6cd973-b207-46d3-a164-619600ce8205"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""b19fe1a8-5c06-4aa7-9c4d-263105abd9ce"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""WASD"",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""8413a436-de50-454f-ad88-b5977da07747"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""WASD"",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""DPAD"",
+                    ""id"": ""75f31776-7e62-4427-921c-2728079491eb"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""4a4eded4-2d86-4dc2-91cb-e1dfaa8fe81c"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""ea558141-4d44-4c05-ad3a-513f4ee0335b"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Thumbstick"",
+                    ""id"": ""c65f755e-ccdb-46f5-a1b2-166bf26f0146"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""2fa705aa-598c-4626-a1d4-fbf32557c096"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""1fb5d980-ca92-42ae-8da8-ac1e5383022c"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
+        },
+        {
+            ""name"": ""ObstacleCourse"",
+            ""id"": ""7e1c132f-03c1-4925-be25-37e8789d0265"",
+            ""actions"": [
+                {
+                    ""name"": ""Turning"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""d46bed26-d2ad-4b3c-8afd-1910c21ade64"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Acceleration"",
+                    ""type"": ""Value"",
+                    ""id"": ""699f59fd-5cf8-4a8e-ba7a-3fb18e04451e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""7224276f-9e7a-4a91-9d14-bf52f9ab0174"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""076f9939-abaf-4fd9-b7ca-6ac6f4573804"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""d727a5da-c9bc-453b-b180-4563065eb539"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""ArrowKeys"",
+                    ""id"": ""0e7234c6-e14c-46b7-b87d-b0a81f91f9ee"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""2a6870be-5ff8-4865-91f1-def962d2fbeb"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""bfa11253-8afb-4f6b-85b1-3acf5410e24a"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""DPAD"",
+                    ""id"": ""b61836a0-4ada-42dd-8eb3-e28a081888d0"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""d38cafae-635b-4c67-9225-26be611a8731"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""e6b64cdc-f0fd-4ac3-99f9-66812508db72"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Thumbstick"",
+                    ""id"": ""562dfd1a-52e3-4ee3-a2b3-40f1fbb68a73"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""fc1498c5-d137-466b-b84d-ccb154b3fde8"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""066d9bee-a78b-4912-b50f-4956d67dcc54"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turning"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""88f7bc97-586c-4aaa-936d-87829279eb91"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""ee57b26f-ea21-449a-a5eb-e41f7e8758a2"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""810afdd6-a295-4d93-bbe6-484929b2a10c"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""ArrowKeys"",
+                    ""id"": ""3cd0bbe5-da61-49b6-b425-47bf82508b61"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""784f090f-517c-4384-aaab-6699d9997e20"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""b2651aa8-7b60-4365-bf9f-21df4a42b951"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""DPAD"",
+                    ""id"": ""947956ae-2606-4894-912d-4ed6846111fb"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""3cec3045-6df5-4355-81c2-66d43ff7cb01"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""9a2acdd7-5a88-487c-9d2b-f482a02c6ae3"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Thumbstick"",
+                    ""id"": ""85d05cdb-48d9-42a4-bcd7-50ff1338cd8f"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""951478fd-8b62-4621-8f54-a188a87c6d4b"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""fcceb9b9-5efe-4d2f-ab43-06f8caa2b9d3"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -361,7 +789,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Bumper_Accleration = m_Bumper.FindAction("Accleration", throwIfNotFound: true);
         // Hippos
         m_Hippos = asset.FindActionMap("Hippos", throwIfNotFound: true);
-        m_Hippos_Newaction = m_Hippos.FindAction("New action", throwIfNotFound: true);
+        m_Hippos_Forward = m_Hippos.FindAction("Forward", throwIfNotFound: true);
+        m_Hippos_Turning = m_Hippos.FindAction("Turning", throwIfNotFound: true);
+        // ObstacleCourse
+        m_ObstacleCourse = asset.FindActionMap("ObstacleCourse", throwIfNotFound: true);
+        m_ObstacleCourse_Turning = m_ObstacleCourse.FindAction("Turning", throwIfNotFound: true);
+        m_ObstacleCourse_Acceleration = m_ObstacleCourse.FindAction("Acceleration", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -452,12 +885,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     // Hippos
     private readonly InputActionMap m_Hippos;
     private IHipposActions m_HipposActionsCallbackInterface;
-    private readonly InputAction m_Hippos_Newaction;
+    private readonly InputAction m_Hippos_Forward;
+    private readonly InputAction m_Hippos_Turning;
     public struct HipposActions
     {
         private @PlayerControls m_Wrapper;
         public HipposActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Hippos_Newaction;
+        public InputAction @Forward => m_Wrapper.m_Hippos_Forward;
+        public InputAction @Turning => m_Wrapper.m_Hippos_Turning;
         public InputActionMap Get() { return m_Wrapper.m_Hippos; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -467,20 +902,67 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_HipposActionsCallbackInterface != null)
             {
-                @Newaction.started -= m_Wrapper.m_HipposActionsCallbackInterface.OnNewaction;
-                @Newaction.performed -= m_Wrapper.m_HipposActionsCallbackInterface.OnNewaction;
-                @Newaction.canceled -= m_Wrapper.m_HipposActionsCallbackInterface.OnNewaction;
+                @Forward.started -= m_Wrapper.m_HipposActionsCallbackInterface.OnForward;
+                @Forward.performed -= m_Wrapper.m_HipposActionsCallbackInterface.OnForward;
+                @Forward.canceled -= m_Wrapper.m_HipposActionsCallbackInterface.OnForward;
+                @Turning.started -= m_Wrapper.m_HipposActionsCallbackInterface.OnTurning;
+                @Turning.performed -= m_Wrapper.m_HipposActionsCallbackInterface.OnTurning;
+                @Turning.canceled -= m_Wrapper.m_HipposActionsCallbackInterface.OnTurning;
             }
             m_Wrapper.m_HipposActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Newaction.started += instance.OnNewaction;
-                @Newaction.performed += instance.OnNewaction;
-                @Newaction.canceled += instance.OnNewaction;
+                @Forward.started += instance.OnForward;
+                @Forward.performed += instance.OnForward;
+                @Forward.canceled += instance.OnForward;
+                @Turning.started += instance.OnTurning;
+                @Turning.performed += instance.OnTurning;
+                @Turning.canceled += instance.OnTurning;
             }
         }
     }
     public HipposActions @Hippos => new HipposActions(this);
+
+    // ObstacleCourse
+    private readonly InputActionMap m_ObstacleCourse;
+    private IObstacleCourseActions m_ObstacleCourseActionsCallbackInterface;
+    private readonly InputAction m_ObstacleCourse_Turning;
+    private readonly InputAction m_ObstacleCourse_Acceleration;
+    public struct ObstacleCourseActions
+    {
+        private @PlayerControls m_Wrapper;
+        public ObstacleCourseActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Turning => m_Wrapper.m_ObstacleCourse_Turning;
+        public InputAction @Acceleration => m_Wrapper.m_ObstacleCourse_Acceleration;
+        public InputActionMap Get() { return m_Wrapper.m_ObstacleCourse; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ObstacleCourseActions set) { return set.Get(); }
+        public void SetCallbacks(IObstacleCourseActions instance)
+        {
+            if (m_Wrapper.m_ObstacleCourseActionsCallbackInterface != null)
+            {
+                @Turning.started -= m_Wrapper.m_ObstacleCourseActionsCallbackInterface.OnTurning;
+                @Turning.performed -= m_Wrapper.m_ObstacleCourseActionsCallbackInterface.OnTurning;
+                @Turning.canceled -= m_Wrapper.m_ObstacleCourseActionsCallbackInterface.OnTurning;
+                @Acceleration.started -= m_Wrapper.m_ObstacleCourseActionsCallbackInterface.OnAcceleration;
+                @Acceleration.performed -= m_Wrapper.m_ObstacleCourseActionsCallbackInterface.OnAcceleration;
+                @Acceleration.canceled -= m_Wrapper.m_ObstacleCourseActionsCallbackInterface.OnAcceleration;
+            }
+            m_Wrapper.m_ObstacleCourseActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Turning.started += instance.OnTurning;
+                @Turning.performed += instance.OnTurning;
+                @Turning.canceled += instance.OnTurning;
+                @Acceleration.started += instance.OnAcceleration;
+                @Acceleration.performed += instance.OnAcceleration;
+                @Acceleration.canceled += instance.OnAcceleration;
+            }
+        }
+    }
+    public ObstacleCourseActions @ObstacleCourse => new ObstacleCourseActions(this);
     private int m_WASDSchemeIndex = -1;
     public InputControlScheme WASDScheme
     {
@@ -506,6 +988,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     }
     public interface IHipposActions
     {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnForward(InputAction.CallbackContext context);
+        void OnTurning(InputAction.CallbackContext context);
+    }
+    public interface IObstacleCourseActions
+    {
+        void OnTurning(InputAction.CallbackContext context);
+        void OnAcceleration(InputAction.CallbackContext context);
     }
 }
