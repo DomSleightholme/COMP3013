@@ -86,7 +86,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""WASD"",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -97,7 +97,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""WASD"",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -218,7 +218,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""WASD"",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Accleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -229,7 +229,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""WASD"",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Accleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -385,7 +385,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""WASD"",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -396,7 +396,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""WASD"",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -505,10 +505,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""076f9939-abaf-4fd9-b7ca-6ac6f4573804"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""WASD"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -516,10 +516,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""d727a5da-c9bc-453b-b180-4563065eb539"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""WASD"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -538,10 +538,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""2a6870be-5ff8-4865-91f1-def962d2fbeb"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -549,10 +549,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""bfa11253-8afb-4f6b-85b1-3acf5410e24a"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -571,10 +571,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""d38cafae-635b-4c67-9225-26be611a8731"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -582,10 +582,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""e6b64cdc-f0fd-4ac3-99f9-66812508db72"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -604,10 +604,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""fc1498c5-d137-466b-b84d-ccb154b3fde8"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -615,10 +615,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""066d9bee-a78b-4912-b50f-4956d67dcc54"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Turning"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -637,10 +637,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""ee57b26f-ea21-449a-a5eb-e41f7e8758a2"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""WASD"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -648,10 +648,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""810afdd6-a295-4d93-bbe6-484929b2a10c"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""WASD"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -670,10 +670,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""784f090f-517c-4384-aaab-6699d9997e20"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -681,10 +681,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""b2651aa8-7b60-4365-bf9f-21df4a42b951"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""ArrowKeys"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -703,10 +703,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""3cec3045-6df5-4355-81c2-66d43ff7cb01"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/dpad/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -714,10 +714,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""9a2acdd7-5a88-487c-9d2b-f482a02c6ae3"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -736,10 +736,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""951478fd-8b62-4621-8f54-a188a87c6d4b"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -747,10 +747,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""fcceb9b9-5efe-4d2f-ab43-06f8caa2b9d3"",
-                    ""path"": """",
+                    ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -776,6 +776,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""devices"": [
                 {
                     ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""ArrowKeys"",
+            ""bindingGroup"": ""ArrowKeys"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -979,6 +990,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         {
             if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
             return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
+    private int m_ArrowKeysSchemeIndex = -1;
+    public InputControlScheme ArrowKeysScheme
+    {
+        get
+        {
+            if (m_ArrowKeysSchemeIndex == -1) m_ArrowKeysSchemeIndex = asset.FindControlSchemeIndex("ArrowKeys");
+            return asset.controlSchemes[m_ArrowKeysSchemeIndex];
         }
     }
     public interface IBumperActions

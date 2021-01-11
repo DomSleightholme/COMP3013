@@ -10,10 +10,6 @@ public class ObstacleMovement : MonoBehaviour
     [Header("Transforms")]
     private Rigidbody RB;
 
-    [Header("Drag")]
-    public float MovementDrag;
-    public float RotationDrag;
-
     [Header("Input System")]
     private PlayerControls inputActions;
 
@@ -28,19 +24,34 @@ public class ObstacleMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        RB.drag = MovementDrag;
-        RB.angularDrag = RotationDrag;
+        //RB.velocity = Vector3.down * 10;
     }
 
     private void Update()
     {
-        PlayerMovement(inputActions.Bumper.Accleration.ReadValue<float>(), inputActions.Bumper.Turning.ReadValue<float>());
+        PlayerMovement(inputActions.ObstacleCourse.Acceleration.ReadValue<float>(), inputActions.ObstacleCourse.Turning.ReadValue<float>());
     }
 
-    void PlayerMovement(float vertical, float horizontal)
+    void PlayerMovement(float vertical, float turning)
     {
-        Vector3 movement = new Vector3(horizontal, 0.0f, vertical);
-        RB.AddForce(movement * Speed);
+        RB.AddForce(transform.forward * vertical * Speed);
+        RB.transform.Rotate(0.0f, turning, 0.0f);
+
+        float turn = inputActions.ObstacleCourse.Turning.ReadValue<float>();
+        if(turn == 0)
+        {
+            RB.freezeRotation = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("DeathBox"))
+        {
+            var checkpoint = FindObjectOfType<PlayerCheckpoint>();
+            transform.position = checkpoint.SpawnCheckpoint.position;
+            RB.velocity = Vector3.zero;
+        }
     }
 
     //Will not work if this is not included

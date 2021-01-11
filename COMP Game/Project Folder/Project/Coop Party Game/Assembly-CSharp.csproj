@@ -82,11 +82,13 @@
     <Compile Include="Assets\Scripts\Menu\Settings.cs" />
     <Compile Include="Assets\Scripts\Menu\StartScreen.cs" />
     <Compile Include="Assets\Scripts\Obstacle\ObstacleMovement.cs" />
-    <Compile Include="Assets\Scripts\Obstacle\Orb.cs" />
+    <Compile Include="Assets\Scripts\Obstacle\Platforms.cs" />
     <Compile Include="Assets\Scripts\Obstacle\PlayerCheckpoint.cs" />
+    <Compile Include="Assets\Scripts\Obstacle\Sweeper.cs" />
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
-    <None Include="Assets\External Assets\KenneysPrototypeTextures\License.txt" />
+    <None Include="Assets\External Assets\Level Design\KenneysPrototypeTextures\License.txt" />
+    <None Include="Assets\External Assets\Level Design\KayKit Mini-Game Variety Pack 1.1\License.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/2019.4.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

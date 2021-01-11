@@ -11,6 +11,8 @@ public class PlayerCheckpoint : MonoBehaviour
     public GameObject Checkpoint_1;
     public GameObject Checkpoint_2;
     public GameObject Checkpoint_3;
+    public Transform SpawnCheckpoint;
+    public GameObject Spawn;
     private void Start()
     {
         CurrentCheckpoint = "None";
@@ -23,16 +25,25 @@ public class PlayerCheckpoint : MonoBehaviour
         {
             Debug.Log("Reached 1st Checkpoint!");
             CurrentCheckpoint = other.gameObject.name;
+            SpawnCheckpoint = other.transform;
         }
         if (other.gameObject.name == "Checkpoint_2")
         {
             Debug.Log("Reached 2nd Checkpoint!");
             CurrentCheckpoint = other.gameObject.name;
+            SpawnCheckpoint = other.transform;
         }
         if (other.gameObject.name == "Checkpoint_3")
         {
             Debug.Log("Reached 3rd Checkpoint!");
             CurrentCheckpoint = other.gameObject.name;
+            SpawnCheckpoint = other.transform;
+        }
+        if(other.gameObject.name == "PlayerSpawn")
+        {
+            Debug.Log("At Spawn");
+            CurrentCheckpoint = "Spawn";
+            SpawnCheckpoint = Spawn.transform;
         }
     }
 }
