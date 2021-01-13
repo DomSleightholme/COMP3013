@@ -10,6 +10,13 @@ public class HipposMovement : MonoBehaviour
     public Vector3 EndRotationSub;
     public Vector3 rotate;
 
+    public Vector3 startPos;
+    public Vector3 movePos;
+    public Vector3 moveEndPos;
+    public Vector3 movement;
+
+    public float speed;
+
     [Header("Transforms")]
     private Rigidbody RB;
 
@@ -25,6 +32,7 @@ public class HipposMovement : MonoBehaviour
     {
         RB = GetComponent<Rigidbody>();
         StartRotation = transform.rotation.eulerAngles.y;
+        startPos = transform.position;
 
         EndRotationPlus.y = StartRotation + CapDecrease;
         EndRotationSub.y = StartRotation - CapDecrease;
@@ -35,12 +43,17 @@ public class HipposMovement : MonoBehaviour
         Turning(inputActions.Hippos.Turning.ReadValue<float>());
 
         rotate.y = RB.transform.localEulerAngles.y;
+
+        movement.z = RB.transform.localPosition.z;
+        movement.x = RB.transform.localPosition.x;
+
     }
 
     void Turning(float turn)
     {
         RB.transform.Rotate(0.0f, turn, 0.0f);
     }
+
 
     //Will not work if this is not included
     private void OnEnable()
