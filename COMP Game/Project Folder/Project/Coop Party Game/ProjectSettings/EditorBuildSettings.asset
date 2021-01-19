@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheBoard.unity
     guid: 65cd6aeb4de7def4fac3d63de6107b9c
+  - enabled: 1
+    path: Assets/Scenes/BumperCars.unity
+    guid: 3d99e601a7ee23d44839659bf03d609d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 3ac462f85ca42ef479d5582c98d67efc,
       type: 2}

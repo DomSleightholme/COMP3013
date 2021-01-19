@@ -64,7 +64,6 @@ public class BumperMovement : MonoBehaviour
     {
         turnInput = input;
     }
-
     public void StartGame()
     {
         acclerationSpeed = AcclerationSpeed;

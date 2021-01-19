@@ -81,8 +81,8 @@
     <Compile Include="Assets\Scripts\Bumper\BumperInputHandler.cs" />
     <Compile Include="Assets\Scripts\Bumper\BumperMovement.cs" />
     <Compile Include="Assets\Scripts\Bumper\Deathbox.cs" />
+    <Compile Include="Assets\Scripts\Bumper\LevelTimer.cs" />
     <Compile Include="Assets\Scripts\CoopLobby.cs" />
-    <Compile Include="Assets\Scripts\Game UI\HeaderManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HungerHippoControl.cs" />
     <Compile Include="Assets\Scripts\HungryHippos\HipposMovement.cs" />
@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Menu\ScrollingButton.cs" />
     <Compile Include="Assets\Scripts\Menu\Settings.cs" />
     <Compile Include="Assets\Scripts\Menu\StartScreen.cs" />
+    <Compile Include="Assets\Scripts\Menu\TheBoardUI.cs" />
     <Compile Include="Assets\Scripts\Obstacle\ObstacleMovement.cs" />
     <Compile Include="Assets\Scripts\Obstacle\Platforms.cs" />
     <Compile Include="Assets\Scripts\Obstacle\PlayerCheckpoint.cs" />
@@ -677,10 +678,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InputSystem.VirtualMouseInput.csproj">
-      <Project>{0AC34A98-346B-1625-3E6D-017959A926FE}</Project>
-      <Name>Unity.InputSystem.VirtualMouseInput</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
       <Project>{B2D40F30-0C9D-70BE-4C09-F82FE5AA46A3}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
@@ -708,6 +705,10 @@
     <ProjectReference Include="PhotonUnityNetworking.csproj">
       <Project>{E43BA221-4EB5-D540-9B1E-F34B2CB6B5E5}</Project>
       <Name>PhotonUnityNetworking</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.VirtualMouseInput.csproj">
+      <Project>{0AC34A98-346B-1625-3E6D-017959A926FE}</Project>
+      <Name>Unity.InputSystem.VirtualMouseInput</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
       <Project>{32DBD8AC-A9BA-5540-DB41-2A20327DF57D}</Project>

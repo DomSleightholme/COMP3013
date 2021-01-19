@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public bool Created;
+    public bool scoresActive;
     public List<Player> playerList = new List<Player>(2);
 
     private void Awake()
@@ -37,17 +38,21 @@ public class ScoreManager : MonoBehaviour
 
     public void StartScores()
     {
-        playerList.Add(new Player(1, 0));
-        playerList.Add(new Player(2, 0));
-
-        Debug.Log(playerList.Count);
+        if(playerList.Count < 2)
+        {
+            playerList.Add(new Player(1, 0));
+            playerList.Add(new Player(2, 0));
+            scoresActive = true;
+            Debug.Log(playerList.Count);
+        }
     }
 
     public void ResetScores()
     {
-        List<Player> playerList = new List<Player>(2);
-
-        playerList.Add(new Player(1, 0));
-        playerList.Add(new Player(2, 0));
+        List<Player> playerList = new List<Player>(2)
+        {
+            new Player(1, 0),
+            new Player(2, 0)
+        };
     }
 }
