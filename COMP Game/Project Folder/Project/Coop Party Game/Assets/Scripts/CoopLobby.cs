@@ -1,104 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class CoopLobby : MonoBehaviour
 {
-    public int PlayerCount;
-    public List<bool> PlayerReady;
-
-    [Header("Lists")]
-    public List<GameObject> PlayerActive;
-    public List<GameObject> PlayerOffline;
-    public List<GameObject> PlayerReadyImage;
-    public GameObject LoginCode;
-
-    [Header("Animator")]
-    public Animator SceneTrans;
-    public GameObject Mask;
-
-    GameManager gameManager;
-
+    public GameObject JoinScreen;
+    public Text IndexCount;
+    public Text player1Score;
+    public Text player2Score;
+    private ScoreManager scoreManager;
+    private PlayerInputManager manager;
+    private BumperMovement[] movement;
+    public int playerCount;
     private void Start()
     {
-        SceneTrans.SetTrigger("FadeOut");
-        StartCoroutine(MaskOff());
-
-        gameManager = FindObjectOfType<GameManager>();
-        if(gameManager.isOnline == true)
-        {
-            LoginCode.SetActive(true);
-        }
-        else
-        {
-            LoginCode.SetActive(false);
-        }
-
-        PlayerCount = 1;
-
-        int i = 0;
-
-        while (i < PlayerActive.Count)
-        {
-            PlayerActive[i].SetActive(false);
-            PlayerOffline[i].SetActive(true);
-            i++;
-        }
+        manager = FindObjectOfType<PlayerInputManager>();
+        movement = FindObjectsOfType<BumperMovement>();
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void Update()
     {
-        if(PlayerCount > 8)
-        {
-            PlayerCount = 8;
-        }
+        playerCount = manager.playerCount;
+        IndexCount.text = manager.playerCount.ToString();
 
-        TrackPlayerUI();
+        if (manager.playerCount > 1)
+        {
+            JoinScreen.SetActive(false);
+            StartGame();
+        }
     }
 
-    public void PlayerStartReady()
-    {
-        int PlayersReady = 0;
-        for (int i = 0; i < PlayerCount; i++)
-        {
-            if (PlayerReady[i] == true)
-            {
-                PlayersReady++;
-            }
-            if (PlayerReady[i] == false)
-            {
-                Debug.Log("off");
-            }
-        }
+    public void StartGame()
+    {     
+        movement[0].StartGame();
+        movement[1].StartGame();
 
-        if (PlayersReady == PlayerCount)
-        {
-            Debug.Log("Start");
-        }
-        Debug.Log(PlayersReady);
-    }
-
-    void TrackPlayerUI()
-    {
-        int currentCount = PlayerCount -1;
-        if (currentCount > 0)
-        {
-            int i = 0;
-            while(i < currentCount)
-            {
-                PlayerActive[i].SetActive(true);
-                PlayerOffline[i].SetActive(false);
-               
-                i++;
-            }
-        }
-    
-    }
-
-    IEnumerator MaskOff()
-    {
-        yield return new WaitForSeconds(1.5f);
-        Mask.SetActive(false);
+        player1Score.text = scoreManager.playerList[0].PlayerScore.ToString();
+        player2Score.text = scoreManager.playerList[1].PlayerScore.ToString();
     }
 }

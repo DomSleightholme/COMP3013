@@ -5,8 +5,6 @@ using UnityEngine;
 public class BumperCarsScoring : MonoBehaviour
 {
     private ScoreManager scoreManager;
-    public int PlayerScore;
-    
     void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
@@ -20,11 +18,13 @@ public class BumperCarsScoring : MonoBehaviour
             {
                 if(transform.parent.name == "Player 1")
                 {
-                    scoreManager.Player1++;
+                    scoreManager.playerList[0].PlayerScore += 1;
+                    Debug.Log("Player 1 score: " + scoreManager.playerList[0].PlayerScore);
                 }
                 if(transform.parent.name == "Player 2")
                 {
-                    scoreManager.Player2++;
+                    scoreManager.playerList[1].PlayerScore += 1;
+                    Debug.Log("Player 1 score: " + scoreManager.playerList[1].PlayerScore);
                 }
             }
         }

@@ -7,8 +7,13 @@ public class BumperMovement : MonoBehaviour
 {
     [Header("Speed Variables")]
     public float AcclerationSpeed;
+    private float acclerationSpeed;
     public float TurnSpeed;
+    private float turnSpeed;
     public float TurnMulitpler;
+    private float turnMulitpler;
+    public float moveInput = 0;
+    public float turnInput = 0;
 
     [Header("Transforms")]
     private Rigidbody RB;
@@ -23,6 +28,7 @@ public class BumperMovement : MonoBehaviour
 
     [Header("Input System")]
     private PlayerControls inputActions;
+    public int playerIndex = 0;
 
     private void Awake()
     {
@@ -31,28 +37,40 @@ public class BumperMovement : MonoBehaviour
     private void Start()
     {
         RB = GetComponent<Rigidbody>();
+
+        acclerationSpeed = 0;
+        turnSpeed = 0;
+        turnMulitpler = 0;
+    }
+    public int getPlayerIndex()
+    {
+        return playerIndex;
     }
     private void FixedUpdate()
     {
         RB.drag = MovementDrag;
         RB.angularDrag = RotationDrag;
     }
-
     private void Update()
     {
-        PlayerRotation(inputActions.Bumper.Turning.ReadValue<float>());
-        PlayerAccleration(inputActions.Bumper.Accleration.ReadValue<float>());
+        RB.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * acclerationSpeed * moveInput);
+        RB.AddTorque(transform.up * turnSpeed * turnMulitpler * turnInput);
+    }
+    public void InputMove(float input)
+    {
+        moveInput = input;
+    }
+    public void InputTurn(float input)
+    {
+        turnInput = input;
     }
 
-    void PlayerAccleration(float Accleration)
+    public void StartGame()
     {
-        RB.AddRelativeForce(new Vector3(Vector3.forward.x, 0, Vector3.forward.z) * AcclerationSpeed * Accleration);
+        acclerationSpeed = AcclerationSpeed;
+        turnSpeed = TurnSpeed;
+        turnMulitpler = TurnMulitpler;
     }
-    void PlayerRotation(float Torque)
-    {
-        RB.AddTorque(transform.up * TurnSpeed * TurnMulitpler * Torque);
-    }
-
     //Collisions
     private void OnCollisionEnter(Collision collision)
     {
