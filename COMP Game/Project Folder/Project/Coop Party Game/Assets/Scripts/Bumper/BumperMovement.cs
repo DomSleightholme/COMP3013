@@ -23,8 +23,10 @@ public class BumperMovement : MonoBehaviour
     public float RotationDrag;
 
     [Header("Collision")]
-    public Transform spawn;
     public float knockbackForce;
+    public GameObject spawn;
+    Transform spawnPositions;
+    int spawnNumber = 0;
 
     [Header("Input System")]
     private PlayerControls inputActions;
@@ -75,8 +77,18 @@ public class BumperMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DeathBox"))
         {
-            transform.position = spawn.transform.position;
-            transform.rotation = spawn.transform.rotation;
+            spawnPositions = spawn.transform.GetChild(spawnNumber);
+            transform.position = spawnPositions.position;
+            transform.rotation = spawnPositions.rotation;
+
+            spawnNumber++;
+
+            if (spawnNumber > 7)
+            {
+                spawnNumber = 0;
+            }
+
+            Debug.Log(spawnNumber);
         }
 
         if (collision.gameObject.CompareTag("Player"))
