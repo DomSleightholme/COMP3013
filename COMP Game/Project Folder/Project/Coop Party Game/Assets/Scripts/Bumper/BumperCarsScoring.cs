@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BumperCarsScoring : MonoBehaviour
 {
-    private ScoreManager scoreManager;
+    private BumperUI bumperUI;
     void Start()
     {
-        scoreManager = FindObjectOfType<ScoreManager>();
+        bumperUI = FindObjectOfType<BumperUI>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -18,13 +18,13 @@ public class BumperCarsScoring : MonoBehaviour
             {
                 if(transform.parent.name == "Player 1")
                 {
-                    scoreManager.playerList[0].PlayerScore += 1;
-                    Debug.Log("Player 1 score: " + scoreManager.playerList[0].PlayerScore);
+                    bumperUI.P1Score += 1;
+                    Debug.Log("Player 1 score: " + bumperUI.P1Score);
                 }
                 if(transform.parent.name == "Player 2")
                 {
-                    scoreManager.playerList[1].PlayerScore += 1;
-                    Debug.Log("Player 1 score: " + scoreManager.playerList[1].PlayerScore);
+                    bumperUI.P2Score += 1;
+                    Debug.Log("Player 1 score: " + bumperUI.P2Score);
                 }
             }
         }

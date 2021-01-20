@@ -8,7 +8,6 @@ public class ScoreManager : MonoBehaviour
     public bool Created;
     public bool scoresActive;
     public List<Player> playerList = new List<Player>(2);
-
     private void Awake()
     {
         if (!Created)
@@ -45,14 +44,5 @@ public class ScoreManager : MonoBehaviour
             scoresActive = true;
             Debug.Log(playerList.Count);
         }
-    }
-
-    public void ResetScores()
-    {
-        List<Player> playerList = new List<Player>(2)
-        {
-            new Player(1, 0),
-            new Player(2, 0)
-        };
     }
 }

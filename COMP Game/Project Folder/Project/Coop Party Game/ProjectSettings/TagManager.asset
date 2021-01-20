@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DeathBox
+  - Sweeper
+  - FinishLine
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX

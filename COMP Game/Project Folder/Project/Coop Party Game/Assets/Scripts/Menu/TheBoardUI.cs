@@ -29,7 +29,6 @@ public class TheBoardUI : MonoBehaviour
     {
         Screen1.SetActive(true);
         Screen2.SetActive(false);
-
         scoreManager = FindObjectOfType<ScoreManager>();
         manager = FindObjectOfType<PlayerInputManager>();
     }
@@ -66,10 +65,17 @@ public class TheBoardUI : MonoBehaviour
         Player2Score.text = scoreManager.playerList[1].PlayerScore.ToString();
     }
 
-    public void StartGames()
+    public void StartBumper()
     {
         SceneManager.LoadScene("BumperCars");
-
+    }
+    public void StartObstacle()
+    {
+        SceneManager.LoadScene("ObstacleCourse");
+    }
+    public void Exit()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     IEnumerator BoardScene()

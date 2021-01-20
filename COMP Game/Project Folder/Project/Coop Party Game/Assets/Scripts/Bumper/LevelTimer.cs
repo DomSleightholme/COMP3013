@@ -5,17 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class LevelTimer : MonoBehaviour
 {
-    float timer = 30;
-
-
-    private void Update()
+    public float timer = 30;
+    private BumperUI bumperUI;
+    private void Start()
+    {
+        bumperUI = FindObjectOfType<BumperUI>();   
+    }
+    public void GameRunning()
     {
         timer -= 1 * Time.deltaTime;
         Debug.Log(timer);
 
-        if(timer < 0)
+        if (timer < 0)
         {
-            SceneManager.LoadScene("TheBoard");
+            bumperUI.EndGame();
+            timer = 0;
         }
     }
 }

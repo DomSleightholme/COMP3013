@@ -62,8 +62,6 @@ public class MenuManager : MonoBehaviour
         Mask.SetActive(true);
         SceneTransition.SetTrigger("FadeIn");
         SceneTransition.SetBool("newScene", true);
-        gameManager.isLocal = false;
-        gameManager.isOnline = true;
 
         StartCoroutine(CoopFade());
     }
@@ -73,8 +71,6 @@ public class MenuManager : MonoBehaviour
         Mask.SetActive(true);
         SceneTransition.SetTrigger("FadeIn");
         SceneTransition.SetBool("newScene", true);
-        gameManager.isLocal = true;
-        gameManager.isOnline = false;
 
         StartCoroutine(CoopFade());
     }
@@ -90,7 +86,7 @@ public class MenuManager : MonoBehaviour
 
     IEnumerator CoopFade()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2);
 
         SceneManager.LoadScene("TheBoard");
     }

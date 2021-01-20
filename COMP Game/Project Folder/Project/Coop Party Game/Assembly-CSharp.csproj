@@ -80,9 +80,9 @@
     <Compile Include="Assets\Scripts\Bumper\BumperCarsScoring.cs" />
     <Compile Include="Assets\Scripts\Bumper\BumperInputHandler.cs" />
     <Compile Include="Assets\Scripts\Bumper\BumperMovement.cs" />
+    <Compile Include="Assets\Scripts\Bumper\BumperUI.cs" />
     <Compile Include="Assets\Scripts\Bumper\Deathbox.cs" />
     <Compile Include="Assets\Scripts\Bumper\LevelTimer.cs" />
-    <Compile Include="Assets\Scripts\CoopLobby.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HungerHippoControl.cs" />
     <Compile Include="Assets\Scripts\HungryHippos\HipposMovement.cs" />
@@ -90,14 +90,15 @@
     <Compile Include="Assets\Scripts\Menu\AnimatedButton.cs" />
     <Compile Include="Assets\Scripts\Menu\CutOutMask.cs" />
     <Compile Include="Assets\Scripts\Menu\FontColour.cs" />
-    <Compile Include="Assets\Scripts\Menu\MenuCamera.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Menu\OptionsMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\ScrollingButton.cs" />
     <Compile Include="Assets\Scripts\Menu\Settings.cs" />
     <Compile Include="Assets\Scripts\Menu\StartScreen.cs" />
     <Compile Include="Assets\Scripts\Menu\TheBoardUI.cs" />
+    <Compile Include="Assets\Scripts\Obstacle\ObstacleInput.cs" />
     <Compile Include="Assets\Scripts\Obstacle\ObstacleMovement.cs" />
+    <Compile Include="Assets\Scripts\Obstacle\ObstacleUI.cs" />
     <Compile Include="Assets\Scripts\Obstacle\Platforms.cs" />
     <Compile Include="Assets\Scripts\Obstacle\PlayerCheckpoint.cs" />
     <Compile Include="Assets\Scripts\Obstacle\Sweeper.cs" />

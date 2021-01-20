@@ -16,6 +16,11 @@ public class PlayerCheckpoint : MonoBehaviour
     private void Start()
     {
         CurrentCheckpoint = "None";
+
+        Checkpoint_1 = GameObject.Find("Checkpoint_1");
+        Checkpoint_2 = GameObject.Find("Checkpoint_2");
+        Checkpoint_3 = GameObject.Find("Checkpoint_3");
+        Spawn = GameObject.Find("MainSpawn");
     }
 
     //Collision Detection
