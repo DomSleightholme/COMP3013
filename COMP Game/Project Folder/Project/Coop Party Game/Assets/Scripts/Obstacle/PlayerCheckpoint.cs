@@ -44,7 +44,7 @@ public class PlayerCheckpoint : MonoBehaviour
             CurrentCheckpoint = other.gameObject.name;
             SpawnCheckpoint = other.transform;
         }
-        if(other.gameObject.name == "PlayerSpawn")
+        if(other.gameObject.name == "MainSpawn")
         {
             Debug.Log("At Spawn");
             CurrentCheckpoint = "Spawn";

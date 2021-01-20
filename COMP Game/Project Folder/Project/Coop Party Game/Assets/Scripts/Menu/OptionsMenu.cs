@@ -23,17 +23,10 @@ public class OptionsMenu : MonoBehaviour
     public Sprite SFXSliderOn;
     public Sprite SFXSliderOff;
 
-    [Header("Resolution")]
-    public Text ResText;
-    public Image LeftResButton;
-    public Image RightResButton;
     public Sprite RightOn;
     public Sprite RightOff;
     public Sprite LeftOn;
     public Sprite LeftOff;
-    public Text ResolutionHeader;
-    public Image ResoloutionButton;
-    public int number;
 
     [Header("Windowed")]
     public Text WinMode;
@@ -61,17 +54,10 @@ public class OptionsMenu : MonoBehaviour
         MusicInteractOff();
         SFXInteractOff();
         WindowOff();
-        ResOff();
 
         Settings settings = FindObjectOfType<Settings>();
-
-        number = settings.currentResolutionIndex;
     }
 
-    private void Update()
-    {
-        ResUI();
-    }
 
     public void MusicInteract()
     {
@@ -107,29 +93,6 @@ public class OptionsMenu : MonoBehaviour
         SFXSliderFill.color = Off;
     }
 
-    public void ResOn()
-    {
-        ResolutionHeader.color = On;
-        ResoloutionButton.color = ButtonOn;
-
-        RightResButton.sprite = RightOn;
-        LeftResButton.sprite = LeftOn;
-
-
-        ResText.color = On;
-    }
-
-    public void ResOff()
-    {
-        ResolutionHeader.color = Off;
-        ResoloutionButton.color = ButtonOff;
-
-        RightResButton.sprite = RightOff;
-        LeftResButton.sprite = LeftOff;
-
-        ResText.color = Off;
-    }
-
     public void WindowOn()
     {
         LeftWinButton.sprite = LeftOn;
@@ -163,46 +126,5 @@ public class OptionsMenu : MonoBehaviour
             WinMode.text = "Off";
         }
       
-    }
-
-    public void ResUI()
-    {
-        Settings settings = FindObjectOfType<Settings>();
-
-        ResText.text = settings.options[number].ToString();
-
-
-    }
-
-    public void RightResUI()
-    {
-        Settings settings = FindObjectOfType<Settings>();
-
-        if (number  < 1)
-        {
-            number = settings.options.Count - 1;
-        }
-        else
-        {
-            number-= 1;
-        }
-
-        settings.Res(number);
-    }
-
-    public void LeftResUI()
-    {
-        Settings settings = FindObjectOfType<Settings>();      
-
-        if(number + 1 == settings.options.Count)
-        {
-            number = 0;
-        }
-        else
-        {
-            number++;
-        }
-
-        settings.Res(number);
     }
 }

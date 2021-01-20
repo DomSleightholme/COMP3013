@@ -17,6 +17,14 @@ public class TheBoardUI : MonoBehaviour
     public Text Player1Score;
     public Text Player2Score;
 
+    [Header("UFO")]
+    public GameObject Player1;
+    public GameObject Player2;
+    public Transform Player1Losing;
+    public Transform Player1Winning;
+    public Transform Player2Losing;
+    public Transform Player2Winning;
+
     [Header("Screens")]
     public GameObject Screen1;
     public GameObject Screen2;
@@ -35,25 +43,17 @@ public class TheBoardUI : MonoBehaviour
 
     private void Update()
     {
-        if(scoreManager.scoresActive == false)
+        if (manager.playerCount > 0)
         {
-            if (manager.playerCount > 0)
-            {
-                Player1Panel.SetActive(false);
-                Player1JoinText.text = "Player 1 Joined!";
-            }
-            if (manager.playerCount > 1)
-            {
-                Player2Panel.SetActive(false);
-                Player2JoinText.text = "Player 2 Joined!";
-                scoreManager.scoresActive = true;
-                StartCoroutine(BoardScene());
-            }
+            Player1Panel.SetActive(false);
+            Player1JoinText.text = "Player 1 Joined!";
         }
-        else
+        if (manager.playerCount > 1)
         {
-            Screen2.SetActive(true);
-            Screen1.SetActive(false);
+            Player2Panel.SetActive(false);
+            Player2JoinText.text = "Player 2 Joined!";
+            scoreManager.scoresActive = true;
+            StartCoroutine(BoardScene());
         }
 
         BoardScreen();
@@ -63,6 +63,25 @@ public class TheBoardUI : MonoBehaviour
     {
         Player1Score.text = scoreManager.playerList[0].PlayerScore.ToString();
         Player2Score.text = scoreManager.playerList[1].PlayerScore.ToString();
+
+        if(scoreManager.playerList[0].PlayerScore > scoreManager.playerList[1].PlayerScore)
+        {
+            //Player 1 winning
+            Player1.transform.position = Player1Winning.position;
+            Player2.transform.position = Player2Losing.position;
+        }
+        else if (scoreManager.playerList[0].PlayerScore < scoreManager.playerList[1].PlayerScore)
+        {
+            //Player 2 winning
+            Player2.transform.position = Player2Winning.position;
+            Player1.transform.position = Player1Losing.position;
+        }
+        else
+        {
+            //drawing
+            Player1.transform.position = Player1Winning.position;
+            Player2.transform.position = Player2Winning.position;
+        }
     }
 
     public void StartBumper()

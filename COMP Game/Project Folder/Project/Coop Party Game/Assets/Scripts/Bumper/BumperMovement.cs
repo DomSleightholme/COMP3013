@@ -27,6 +27,7 @@ public class BumperMovement : MonoBehaviour
     public GameObject spawn;
     Transform spawnPositions;
     int spawnNumber = 0;
+    public AudioSource Collision;
 
     [Header("Input System")]
     private PlayerControls inputActions;
@@ -95,6 +96,7 @@ public class BumperMovement : MonoBehaviour
         {
             Vector3 knockbackDirection = RB.transform.position - collision.transform.position;
             RB.AddForce(knockbackDirection * knockbackForce);
+            Collision.Play();
         }
     }
 

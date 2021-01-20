@@ -71,8 +71,8 @@ public class ObstacleUI : MonoBehaviour
     public void Return()
     {
         StartCoroutine(ReturnTimer());
-        scoreManager.playerList[0].PlayerScore = P1;
-        scoreManager.playerList[1].PlayerScore = P2;
+        scoreManager.playerList[0].PlayerScore += P1;
+        scoreManager.playerList[1].PlayerScore += P2;
     }
 
     public IEnumerator ReturnTimer()

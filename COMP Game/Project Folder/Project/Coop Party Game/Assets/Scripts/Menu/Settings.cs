@@ -16,13 +16,11 @@ public class Settings : MonoBehaviour
     float music;
     float sfx;
 
-    public Resolution[] resolutions;
     public List<string> options;
 
     public int currentResolutionIndex = 0;
     private void Start()
     {
-        resolutions = Screen.resolutions;
 
         StartMusic();
         StartSFX();
@@ -30,25 +28,7 @@ public class Settings : MonoBehaviour
         SFXSlider.value = sfx;
         MusicSlider.value = music;
 
-        options = new List<string>();
-
-        currentResolutionIndex = 0;
-        for(int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResolutionIndex = i;
-            }
-        }
-    }
-
-    public void Res(int number)
-    {
-        Resolution resolution = resolutions[number];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        options = new List<string>();   
     }
 
     private float StartMusic()
